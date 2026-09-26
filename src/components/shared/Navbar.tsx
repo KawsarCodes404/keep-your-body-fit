@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <header className="border-b border-[#20232b] bg-[#0b0d10]">
       <nav className="mx-auto flex min-h-16 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-        {/* Dumbbell logo and FITLOG name */}
+        {/* The logo part on left side of the navbar page */}
         <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
             src={brandLogo}
@@ -32,7 +32,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Navigation links */}
+        {/* All Navigation links */}
         <div className="flex items-center gap-1">
           <Link
             href="/"
@@ -57,7 +57,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Live plan and saved counts */}
+        {/* live counts */}
         <div className="flex shrink-0 items-center gap-3 text-sm">
           <Link
             href="/my-plan"

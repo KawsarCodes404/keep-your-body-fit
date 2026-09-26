@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import brandLogo from "@/assets//Brand Logo Left for footer.png";
+import brandLogo from "@/assets/logo.png";
 
 export default function Footer() {
   return (
@@ -8,12 +8,18 @@ export default function Footer() {
 
       <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6">
 
-        <Link href="/" className="flex shrink-0 items-center">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
             src={brandLogo}
-            alt="FitLog"
-            className="h-auto w-[100px] object-contain"
+            alt=""
+            aria-hidden="true"
+            width={17}
+            height={17}
+            className="object-contain"
           />
+          <span className="font-heading text-[16px] font-semibold text-white">
+            FITLOG
+          </span>
         </Link>
 
         <p className="text-center text-xs text-gray-500 sm:text-right">
