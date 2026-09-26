@@ -166,7 +166,7 @@ const MyPlan = () => {
 
               <div className="flex flex-wrap items-center gap-2 sm:justify-end">
                 <Link
-                  href={`/workout/${workout.id}`}
+                  href={`/workouts/${workout.id}`}
                   className="rounded-full border border-[#343944] px-4 py-2 text-center text-xs text-white transition hover:border-gray-500"
                 >
                   View Details
