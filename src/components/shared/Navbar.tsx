@@ -99,7 +99,6 @@ export default function Navbar() {
 //         useContext(WorkoutContext);
 
 //     const isPlanPage = pathname === "/my-plan";
-
 //     return (
 //         <header className="border-b border-[#20232b] bg-[#0b0d10]">
 //             <nav className="container mx-auto flex min-h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -119,7 +118,6 @@ export default function Navbar() {
 //                                 FITLOG
 //                             </p>
 //                         </Link>
-
 //                         {/* Middle part */}
 //                         <div className="flex items-center gap-1">
 //                             <Link
@@ -142,7 +140,6 @@ export default function Navbar() {
 //                                 My Plan
 //                             </Link>
 //                         </div>
-
 //                         {/* Plan and Saved counts */}
 //                         <div className="flex shrink-0 items-center gap-3 text-sm">
 //                             <Link
