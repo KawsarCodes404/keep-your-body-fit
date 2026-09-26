@@ -164,6 +164,7 @@ const MyPlan = () => {
                 </div>
               </div>
 
+              {/* View Details button on the right side */}
               <div className="flex flex-wrap items-center gap-2 sm:justify-end">
                 <Link
                   href={`/workouts/${workout.id}`}
@@ -172,6 +173,7 @@ const MyPlan = () => {
                   View Details
                 </Link>
 
+                {/* Mark as done button right after view details button */}
                 {activeTab === "plan" && (
                   <button
                     type="button"
@@ -202,6 +204,7 @@ const MyPlan = () => {
   );
 };
 
+// The metric part
 function Metric({
   label,
   value,
