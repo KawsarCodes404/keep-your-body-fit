@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Iworkout } from "@/types/workout";
 import WorkoutActions from "@/components/WorkoutActions";
+import { notFound } from "next/navigation";
 
 interface IWorkoutDetailPage {
     params: Promise<{
@@ -31,17 +32,18 @@ const WorkoutDetailPage = async ({ params }: IWorkoutDetailPage) => {
 
     if (!workout) {
         return (
-            <main className="mx-auto flex min-h-[60vh] max-w-7xl flex-col items-center justify-center px-4 text-center">
-                <h1 className="font-heading text-3xl font-bold uppercase text-white">
-                    Workout not found
-                </h1>
-                <Link
-                    href="/"
-                    className="mt-5 rounded-md bg-[#ccff00] px-5 py-3 text-sm font-bold text-black"
-                >
-                    Back to workouts
-                </Link>
-            </main>
+            notFound()
+            // <main className="mx-auto flex min-h-[60vh] max-w-7xl flex-col items-center justify-center px-4 text-center">
+            //     <h1 className="font-heading text-3xl font-bold uppercase text-white">
+            //         Workout not found
+            //     </h1>
+            //     <Link
+            //         href="/"
+            //         className="mt-5 rounded-md bg-[#ccff00] px-5 py-3 text-sm font-bold text-black"
+            //     >
+            //         Back to workouts
+            //     </Link>
+            // </main>
         );
     }
 
