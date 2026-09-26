@@ -125,12 +125,24 @@ const WorkoutProvider = ({ children }: { children: ReactNode }) => {
     showToast("Removed from saved workouts");
   };
 
+  // const markAsDone = (id: number) => {
+  //   setDoneWorkoutIds((current) =>
+  //     current.includes(id) ? current : [...current, id]
+  //   );
+  //   showToast("Workout marked as done");
+  // };
+
   const markAsDone = (id: number) => {
-    setDoneWorkoutIds((current) =>
-      current.includes(id) ? current : [...current, id]
-    );
-    showToast("Workout marked as done");
-  };
+  setDoneWorkoutIds((current) =>
+    current.includes(id) ? current : [...current, id]
+  );
+
+  setPlanWorkouts((current) =>
+    current.filter((workout) => workout.id !== id)
+  );
+
+  showToast("Workout marked as done");
+};
 
   const sharedData: IWorkoutContext = {
     planWorkouts,
